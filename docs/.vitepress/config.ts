@@ -1,5 +1,8 @@
 import { defineConfig } from "vitepress";
-import { demoBlockPlugin } from "vitepress-theme-demoblock";
+import {
+  demoBlockPlugin,
+  demoblockVitePlugin
+} from "vitepress-theme-demoblock";
 
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
@@ -26,7 +29,13 @@ export default defineConfig({
   },
   markdown: {
     config(md) {
-      md.use(demoBlockPlugin);
+      // 这里可以使用markdown-it的的插件
+      md.use(demoBlockPlugin, {
+        customClass: "demoblock-custom"
+      });
     }
+  },
+  vite: {
+    plugins: [demoblockVitePlugin() as any]
   }
 });

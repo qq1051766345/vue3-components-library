@@ -1,0 +1,7 @@
+@use "./button-type.scss";
+@import "./button-base.scss";
+.s-btn {
+  @include button-base; // 根据按钮类型动态生成
+  @include button-variant(button-type.$type); // 伪类生成
+  @include button-variant(button-type.$pseudo, true);
+}
