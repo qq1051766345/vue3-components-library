@@ -6,10 +6,19 @@ export default defineComponent({
   props: buttonPros,
   setup(props: ButtonProps, { slots }) {
     // 为了不丢失响应式，需要使用toRefs
-    const { type } = toRefs(props);
+    const { type, size, disabled, block } = toRefs(props);
     return () => {
-      const defaultSlot = slots.default ? slots.default() : "12321";
-      return <button class={`s-btn s-btn-${type.value}`}>{defaultSlot}</button>;
+      const defaultSlot = slots.default ? slots.default() : "按钮";
+      // block
+      const blockCls = block.value ? "s-btn-block" : "";
+      return (
+        <button
+          disabled={disabled.value}
+          class={`s-btn s-btn-${type.value} s-btn-${size.value} ${blockCls}`}
+        >
+          {defaultSlot}
+        </button>
+      );
     };
   }
 });

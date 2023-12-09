@@ -1,12 +1,12 @@
 import type { App } from "vue";
-import Button from "./src/Button";
+import SButton from "./src/Button";
 
 // 具名导出
-export { Button };
+export { SButton };
 
 // 导出插件
 export default {
   install(app: App) {
-    app.component(Button.name, Button);
+    app.component(SButton.name, SButton);
   }
 };

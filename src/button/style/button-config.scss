@@ -18,6 +18,23 @@ $type: (
   )
 );
 
+// 按钮尺寸的配置
+$size: (
+  small: (
+    height: 24px,
+    padding: 0 16px,
+    font-size: $s-font-size-sm
+  ),
+  medium: (
+    font-size: $s-font-size-md
+  ),
+  large: (
+    height: 32px,
+    padding: 0 24px,
+    font-size: $s-font-size-lg
+  )
+);
+
 // 按钮类型的配置
 $pseudo: (
   primary: (
@@ -31,6 +48,11 @@ $pseudo: (
     ),
     active: (
       background-color: $s-primary-active
+    ),
+    disabled: (
+      color: $s-light-text,
+      background-color: $s-primary-disabled,
+      border-color: none
     )
   ),
   secondary: (
@@ -45,6 +67,11 @@ $pseudo: (
     active: (
       border-color: $s-form-control-line-active,
       color: $s-brand-active
+    ),
+    disabled: (
+      color: $s-disabled-text,
+      background-color: $s-disabled-bg,
+      border-color: 1px solid $s-disabled-line
     )
   ),
   text: (
@@ -56,6 +83,9 @@ $pseudo: (
     ),
     active: (
       color: $s-brand-active-focus
+    ),
+    disabled: (
+      color: $s-disabled-text
     )
   )
 );

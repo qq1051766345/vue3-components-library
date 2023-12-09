@@ -1,6 +1,12 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import type { InlineConfig } from "vitest";
+import type { UserConfig } from "vite";
+// 扩展vitest配置
+interface VitestConfigExport extends UserConfig {
+  test: InlineConfig;
+}
 import path from "path";
 //不用查了，我给你查到了
 import { fileURLToPath } from "url";
@@ -12,9 +18,19 @@ const __dirname = path.dirname(__filename);
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), vueJsx({})],
+  test: {
+    // jest like test apis
+    globals: true,
+    // 模拟dom环境
+    environment: "happy-dom",
+    // 支持tsx
+    transformMode: {
+      web: [/.[tj]sx$/]
+    }
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src")
     }
   }
-});
+} as VitestConfigExport);

@@ -1,6 +1,8 @@
 // 定义主题变量
 $s-border-radius: var(--s-border-radius, 2px); //一般圆角
+$s-font-size-sm: var(--s-font-size-sm, 10px); //一般字体大小
 $s-font-size-md: var(--s-font-size-md, 12px); //一般字体大小
+$s-font-size-lg: var(--s-font-size-lg, 14px); //一般字体大小
 $s-animation-duration-slow: var(
   --s-animation-duration-slow,
   0.3s
@@ -11,9 +13,13 @@ $s-animation-ease-in-out: var(
 ); //一般动画速度
 $s-light-text: var(--s-light-text, #fff); //有色深色北京下字体颜色
 $s-primary: var(--s-primary, #5e7ce0); //主题色
+$s-primary-disabled: var(--s-primary-disabled, #8599dd); //主题色
 $s-primary-hover: var(--s-primary-hover, #7693f5); //主题色hover
 $s-primary-active: var(--s-primary-active, #344899); //主题色active
+$s-disabled-bg: var(--s-disabled-bg, #f5f5f5); //禁用背景色
+$s-disabled-line: var(--s-disabled-line, #ebebeb); //禁用边框色
 $s-text: var(--s-text, #252b3a); //正文文本
+$s-disabled-text: var(--s-disabled-text, #adb0b8); //禁用文本
 $s-block: var(
   --s-block,
   #ffffff
