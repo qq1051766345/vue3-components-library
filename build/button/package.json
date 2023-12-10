@@ -1,0 +1,9 @@
+{
+      "name": "button",
+      "version": "0.0.0",
+      "main": "index.umd.cjs",
+      "module": "index.js",
+      "author": "denghao",
+      "description":"邓浩的组件库练习项目"
+    }
+  

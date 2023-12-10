@@ -1,0 +1,9 @@
+{
+      "name": "dh-ui",
+      "version": "0.0.0",
+      "main": "dh-ui.umd.cjs",
+      "module": "dh-ui.js",
+      "author": "denghao",
+      "description":"邓浩的组件库练习项目"
+    }
+  

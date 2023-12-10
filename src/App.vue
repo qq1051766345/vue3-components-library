@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SButton } from "./button";
+// import { SButton } from "./button";
 const confirm = () => {
   console.log("confirm!!!!");
 };
