@@ -22,6 +22,27 @@ export default defineConfig({
                 link: "/components/button/"
               }
             ]
+          },
+          {
+            text: "导航",
+            items: [
+              {
+                text: "Button 按钮",
+                link: "/components/button/"
+              }
+            ]
+          },
+          {
+            text: "反馈"
+          },
+          {
+            text: "数据录入"
+          },
+          {
+            text: "数据展示"
+          },
+          {
+            text: "布局"
           }
         ]
       }

@@ -1,0 +1,23 @@
+{
+  "name": "denghao-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "tsnd ./src/index.ts create",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "kolorist": "^1.8.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^3.3.0",
+    "inquirer": "^8.2.6"
+  }
+}
