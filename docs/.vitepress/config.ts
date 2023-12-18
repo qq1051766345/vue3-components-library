@@ -39,7 +39,13 @@ export default defineConfig({
             text: "数据录入"
           },
           {
-            text: "数据展示"
+            text: "数据展示",
+            items: [
+              {
+                text: "树形控件",
+                link: "/components/tree/"
+              }
+            ]
           },
           {
             text: "布局"

@@ -34,7 +34,7 @@ export default async function createComponent(meta: ComponentMeta) {
   const typesFilePath = resolve(compSrcDir, name + "-types") + ".ts";
   const styleFilePath = resolve(styleDir, name) + ".scss";
   const testFilePath = resolve(testDir, name) + ".test.ts";
-  const indexFilePath = resolve(componentDir, "/index.ts");
+  const indexFilePath = resolve(componentDir) + "/index.ts";
   writeFileSync(coreFilePath, genCoreTemplate(name), WRITE_FILE_OPTIONS);
   writeFileSync(typesFilePath, genTypesTemplate(name), WRITE_FILE_OPTIONS);
   writeFileSync(styleFilePath, genStyleTemplate(name), WRITE_FILE_OPTIONS);

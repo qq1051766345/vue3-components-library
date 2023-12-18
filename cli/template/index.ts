@@ -4,7 +4,7 @@ import { upperFirst } from "./util";
 export default function genIndexTemplate(name: string) {
   const compName = "S" + upperFirst(name);
   return `import type { App } from "vue";
-import ${compName} from "./src/Button";
+import ${compName} from "./src/${name}";
 
 // 具名导出
 export { ${compName} };
@@ -12,7 +12,7 @@ export { ${compName} };
 // 导出插件
 export default {
   install(app: App) {
-    app.component(${compName}.name, SButton);
+    app.component(${compName}.name, ${compName});
   }
 };
 `;

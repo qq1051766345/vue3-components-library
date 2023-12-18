@@ -1,5 +1,6 @@
 import { defineComponent, toRefs } from "vue";
 import { ButtonProps, buttonPros } from "./button-types";
+import "../style/button.scss";
 
 export default defineComponent({
   name: "SButton",

@@ -1,17 +1,11 @@
 # 按钮 - Button
 
-<HelloWorld />
-
 :::demo
 
 ```vue
   <template>
-    <HelloWorld />
+    <SButton block type="primary">我的按钮</SButton>
   </template>
 ```
 
 :::
-
-```html
-<HelloWorld />
-```
