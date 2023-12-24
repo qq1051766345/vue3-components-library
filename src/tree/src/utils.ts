@@ -15,7 +15,8 @@ export function generateInnerTree(
       // 子到父出的这个过程
       path.pop();
     }
-    // 记录父节点
+
+    // 记录当前节点
     path.push(o);
 
     // 获取parentNode
